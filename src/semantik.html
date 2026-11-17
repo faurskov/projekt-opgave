@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantisk HTML | Tips og tricks</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">Forside</a>
+        <a href="./semantik.html" aria-current="page">Semantisk HTML</a>
+        <a href="./navigation.html">Navigation</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Gode tips til semantisk HTML</h1>
+      <section>
+        <p>
+          Semantisk HTML betyder, at du vælger elementer efter indholdets
+          betydning og funktion – ikke kun efter, hvordan de ser ud. Det gør
+          siden lettere at forstå for både browsere, søgemaskiner og mennesker,
+          der bruger hjælpemidler.
+        </p>
+        <ul>
+          <li>
+            Brug <code>&lt;header&gt;</code> til indledende indhold og
+            <code>&lt;nav&gt;</code> til sidens vigtigste navigation.
+            Læs mere om
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">header</a>
+            og
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">nav</a>
+            på MDN.
+          </li>
+          <li>
+            Placér sidens primære indhold i <code>&lt;main&gt;</code>. Brug
+            <code>&lt;section&gt;</code> til at samle indhold om et bestemt
+            emne, og giv sektionen en overskrift. Se MDN's vejledninger om
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">main</a>
+            og
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">section</a>.
+          </li>
+          <li>
+            Vælg overskrifter efter hierarki: start med
+            <code>&lt;h1&gt;</code>, og brug derefter
+            <code>&lt;h2&gt;</code> og <code>&lt;h3&gt;</code> til
+            underafsnit. Brug ikke overskrifter kun for at få en bestemt
+            tekststørrelse.
+          </li>
+          <li>
+            Brug <code>&lt;a&gt;</code> til at føre brugeren til en anden side
+            og <code>&lt;button&gt;</code> til en handling, for eksempel at
+            åbne en menu.
+          </li>
+        </ul>
+        <p>
+          En god tommelfingerregel er at spørge: “Hvad er dette indhold?” og
+          vælge HTML-elementet, der bedst beskriver svaret. MDN forklarer
+          <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html">semantik i HTML</a>
+          nærmere.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

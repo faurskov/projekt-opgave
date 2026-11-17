@@ -1,23 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projekt</title>
     <link href="./styles.css" rel="stylesheet" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./pages/about.html">About</a>
-            <a href="./pages/contact.html">Contact</a>
-        </nav>
+      <nav>
+        <a href="./index.html">Forside</a>
+        <a href="./semantik.html">Semantisk HTML</a>
+        <a href="./navigation.html">Navigation</a>
+      </nav>
     </header>
     <main>
-        <h1>Home</h1>
-        <img src="./images/tiny-kitten-in-sunlight.webp" />
+      <h1>Tips og tricks</h1>
+      <section>
+        <h2>Hvad er CSS-import?</h2>
+        <p>
+          Med CSS-import kan du hente en anden CSS-fil ind i dit stylesheet.
+          Det gør det nemmere at dele dine styles op i mindre filer, for
+          eksempel én fil til typografi og en anden til sidens grundlæggende
+          udseende. Skriv importen øverst i CSS-filen, sådan her:
+        </p>
+        <pre><code>@import "./styles/typography.css";</code></pre>
+        <p>
+          Stien fortæller browseren, hvor filen ligger. Når siden indlæses,
+          læser browseren også styles fra den importerede fil.
+        </p>
+      </section>
     </main>
-    <footer></footer>
-</body>
+  </body>
 </html>

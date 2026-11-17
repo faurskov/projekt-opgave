@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation | Tips og tricks</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">Forside</a>
+        <a href="./semantik.html">Semantisk HTML</a>
+        <a href="./navigation.html" aria-current="page">Navigation</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Navigation på en hjemmeside</h1>
+      <section>
+        <h2>Forskellen på links og knapper</h2>
+        <p>
+          Brug et <code>&lt;a&gt;</code>-element, når brugeren skal navigere til
+          en anden side eller et andet sted på siden. Et link har en
+          <code>href</code>, der fortæller, hvor det fører hen.
+        </p>
+        <p>
+          Brug et <code>&lt;button&gt;</code>-element, når brugeren skal udføre
+          en handling på den aktuelle side, for eksempel åbne en menu eller
+          starte en søgning. Knapper kan reagere på klik og tastatur uden ekstra
+          tilpasning.
+        </p>
+      </section>
+      <section>
+        <h2>Eksempel på en menu med logo, burgermenu og søgeikon</h2>
+        <p>
+          Her er et grundlæggende HTML-eksempel. Burgermenuen styrer
+          navigationen, og søgeknappen kan åbne et søgefelt. JavaScript skal
+          bruges til at åbne og lukke menuen og søgningen.
+        </p>
+        <pre><code>&lt;header&gt;
+  &lt;a href="/" aria-label="Gå til forsiden"&gt;
+    &lt;img src="/images/logo.svg" alt="Firmanavn" /&gt;
+  &lt;/a&gt;
+
+  &lt;button
+    type="button"
+    aria-label="Åbn menu"
+    aria-expanded="false"
+    aria-controls="hovedmenu"
+  &gt;
+    &lt;svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2"&gt;
+      &lt;path d="M3 6h18M3 12h18M3 18h18" /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;nav id="hovedmenu" aria-label="Hovedmenu" hidden&gt;
+    &lt;a href="/produkter"&gt;Produkter&lt;/a&gt;
+    &lt;a href="/om-os"&gt;Om os&lt;/a&gt;
+    &lt;a href="/kontakt"&gt;Kontakt&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;button type="button" aria-label="Åbn søgning"&gt;
+    &lt;svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2"&gt;
+      &lt;circle cx="10.5" cy="10.5" r="6.5" /&gt;
+      &lt;path d="m15.5 15.5 5 5" /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/header&gt;</code></pre>
+        <p>
+          Når menuen åbnes, skal JavaScript fjerne
+          <code>hidden</code> og ændre <code>aria-expanded</code> til
+          <code>"true"</code>. Ikonerne er SVG'er, og
+          <code>aria-hidden="true"</code> skjuler dem for skærmlæsere, fordi
+          knapperne allerede har tydelige etiketter.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
